@@ -79,3 +79,26 @@
       footer {
         background: linear-gradient(180deg, rgba(123,92,243,.08), rgba(0,0,0,0));
       }
+
+
+
+
+      .dia {
+  cursor: pointer;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+  transition: all 0.3s;
+}
+
+.dia:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.dia.selecionado {
+  background-color: #28a745;
+  color: white;
+}

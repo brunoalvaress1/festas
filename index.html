@@ -377,6 +377,31 @@
   </div>
 </section>
 
+
+<div class="container mt-5">
+  <h2>Agendamento do Salão de Festas</h2>
+
+  <!-- Dias disponíveis -->
+  <div class="row" id="dias-disponiveis">
+    <!-- Os dias serão preenchidos dinamicamente -->
+  </div>
+
+  <!-- Código secreto -->
+  <div class="mb-3 mt-4">
+    <label for="codigo" class="form-label">Insira o Código para Agendar</label>
+    <input type="text" class="form-control" id="codigo" placeholder="Digite seu código">
+  </div>
+  <button id="verificarCodigo" class="btn btn-primary mb-3">Verificar Código</button>
+
+  <!-- Botão de agendamento (aparece apenas com código correto) -->
+  <div id="agendamento" style="display:none;">
+    <button id="abrirCalendario" class="btn btn-success">Agendar no Google Calendar</button>
+  </div>
+
+  <div id="mensagem" class="mt-3"></div>
+</div>
+
+
     <!-- CONTATO -->
     <section id="contato" class="container py-5">
       <div class="text-center mb-4">
