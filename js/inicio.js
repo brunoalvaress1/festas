@@ -43,65 +43,42 @@
       });
 
 
-$(document).ready(function() {
-  // Dias disponíveis
-  const diasDisponiveis = ['2025-08-17','2025-08-18','2025-08-20','2025-08-22'];
+// CONFIGURAÇÃO
+const API_KEY = "AIzaSyCitF_NiiKcOYWAfUoLRmw9cWnuUzT2fA4";
+const CALENDAR_ID = "https://calendar.google.com/calendar/u/1?cid=YnJ1bm9hdnIyMTNAZ21haWwuY29t";
+const CODIGO_CORRETO = "MEUCODIGO123";
 
-  // Inicializar o datepicker
-  $('#datepicker').datepicker({
-    format: 'yyyy-mm-dd',
-    startDate: '2025-08-01',
-    endDate: '2025-12-31',
-    autoclose: true,
-    beforeShowDay: function(date) {
-      // Formata a data do datepicker para yyyy-mm-dd
-      const d = date.getFullYear() + '-' + String(date.getMonth()+1).padStart(2,'0') + '-' + String(date.getDate()).padStart(2,'0');
-      
-      if(diasDisponiveis.includes(d)) {
-        return {
-          enabled: true,
-          classes: 'text-success bg-light' // disponível em verde
-        };
-      } else {
-        return {
-          enabled: false,
-          classes: 'text-muted bg-light' // bloqueado em cinza
-        };
+// Buscar eventos do Google Calendar
+fetch(`https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`)
+  .then(response => response.json())
+  .then(data => {
+    const lista = document.getElementById("lista-datas");
+    const hoje = new Date();
+    data.items.forEach(evento => {
+      if(evento.start && evento.start.date) {
+        let dataEvento = new Date(evento.start.date);
+        if(dataEvento >= hoje) {
+          let li = document.createElement("li");
+          li.className = "list-group-item";
+          li.textContent = `${evento.start.date} - ${evento.summary || "Reservado"}`;
+          lista.appendChild(li);
+        }
       }
-    }
+    });
   });
 
-  const codigoCorreto = "MEUCODIGO123";
-  let codigoValido = false;
+// Verificar código
+document.getElementById("verificarCodigo").addEventListener("click", () => {
+  const codigo = document.getElementById("codigo").value;
+  if(codigo === CODIGO_CORRETO) {
+    document.getElementById("agendamento").style.display = "block";
+    document.getElementById("mensagem").innerHTML = `<div class="alert alert-success">Código válido! Escolha a data e agende.</div>`;
+  } else {
+    document.getElementById("mensagem").innerHTML = `<div class="alert alert-danger">Código inválido!</div>`;
+  }
+});
 
-  // Verificar código
-  $('#verificarCodigo').click(function() {
-    const inputCodigo = $('#codigo').val();
-    if(inputCodigo === codigoCorreto) {
-      $('#agendamento').show();
-      codigoValido = true;
-      $('#mensagem').html('<div class="alert alert-success">Código válido! Agora você pode agendar.</div>');
-    } else {
-      $('#agendamento').hide();
-      codigoValido = false;
-      $('#mensagem').html('<div class="alert alert-danger">Código inválido!</div>');
-    }
-  });
-
-  // Abrir Google Calendar
-  $('#abrirCalendario').click(function() {
-    const dataSelecionada = $('#datepicker').val();
-    if(!dataSelecionada) {
-      $('#mensagem').html('<div class="alert alert-danger">Escolha uma data!</div>');
-      return;
-    }
-    if(!codigoValido) {
-      $('#mensagem').html('<div class="alert alert-danger">Insira o código para agendar!</div>');
-      return;
-    }
-
-    const dataFormatada = dataSelecionada.replace(/-/g,'');
-    const link = `https://calendar.google.com/calendar/r/eventedit?text=Agendamento+Sal%C3%A3o+de+Festas&dates=${dataFormatada}/${dataFormatada}&details=Agendamento+via+site`;
-    window.open(link,'_blank');
-  });
+// Abrir Google Calendar
+document.getElementById("abrirCalendario").addEventListener("click", () => {
+  window.open("https://calendar.google.com/calendar/r/eventedit", "_blank");
 });

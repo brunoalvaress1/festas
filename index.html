@@ -379,28 +379,23 @@
 </section>
 
 <div class="container mt-5">
-  <h2>Agendamento do Salão de Festas</h2>
+  <h2>Datas disponíveis - Salão de Festas</h2>
+  <ul id="lista-datas" class="list-group"></ul>
 
-  <!-- Código secreto -->
-  <div class="mb-3">
-    <label for="codigo" class="form-label">Insira o Código para Agendar</label>
-    <input type="text" class="form-control" id="codigo" placeholder="Digite seu código">
+  <hr>
+  <div class="mb-3 mt-4">
+    <label for="codigo" class="form-label">Código para agendar</label>
+    <input type="text" id="codigo" class="form-control" placeholder="Digite seu código">
   </div>
-  <button id="verificarCodigo" class="btn btn-primary mb-3">Verificar Código</button>
+  <button id="verificarCodigo" class="btn btn-primary">Verificar Código</button>
 
-  <!-- Calendário (sempre visível, mas só agenda com código) -->
-  <div class="mb-3">
-    <label for="datepicker" class="form-label">Selecione a Data</label>
-    <input type="text" class="form-control" id="datepicker" placeholder="Clique para selecionar uma data">
-  </div>
-
-  <!-- Botão de agendar (só aparece se o código estiver correto) -->
-  <div id="agendamento" style="display:none;">
+  <div id="agendamento" style="display:none;" class="mt-3">
     <button id="abrirCalendario" class="btn btn-success">Agendar no Google Calendar</button>
   </div>
 
   <div id="mensagem" class="mt-3"></div>
 </div>
+
 
 
 
