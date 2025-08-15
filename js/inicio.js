@@ -43,8 +43,6 @@
       });
 
 
-
-
 $(document).ready(function() {
   // Dias disponíveis
   const diasDisponiveis = ['2025-08-17','2025-08-18','2025-08-20','2025-08-22'];
@@ -56,11 +54,20 @@ $(document).ready(function() {
     endDate: '2025-12-31',
     autoclose: true,
     beforeShowDay: function(date) {
-      const d = date.toISOString().split('T')[0];
+      // Formata a data do datepicker para yyyy-mm-dd
+      const d = date.getFullYear() + '-' + String(date.getMonth()+1).padStart(2,'0') + '-' + String(date.getDate()).padStart(2,'0');
+      
       if(diasDisponiveis.includes(d)) {
-        return {classes: 'text-success'}; // verde para disponível
+        return {
+          enabled: true,
+          classes: 'text-success bg-light' // disponível em verde
+        };
+      } else {
+        return {
+          enabled: false,
+          classes: 'text-muted bg-light' // bloqueado em cinza
+        };
       }
-      return false; // bloqueia dias não disponíveis
     }
   });
 
