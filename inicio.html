@@ -1,0 +1,319 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Era Uma Vez | Salão de Festas</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./css/inicio.css">
+    <link rel="stylesheet" href="">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80">
+<!-- NAVBAR -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+          <span class="brand-badge">Era Uma Vez</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#valores">Valor</a></li>
+            <li class="nav-item"><a class="nav-link" href="#galeria">Imagens</a></li>
+            <li class="nav-item"><a class="nav-link" href="#endereco">Endereço</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO: Vídeo principal -->
+    <header id="inicio" class="hero container">
+      <div class="row g-4 align-items-center w-100">
+        <div class="col-12 col-lg-6">
+          <span class="pill mb-2"><i class="bi bi-balloon"></i> Salão de festas temático</span>
+          <h1 class="display-5 section-title">Bem-vindos ao <span class="brand-badge">Era Uma Vez</span></h1>
+          <p class="lead mt-2">Um espaço encantado para aniversários, casamentos, formaturas e eventos corporativos. Estrutura completa, decoração flexível e equipe dedicada para seu momento ser inesquecível.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#valores" class="btn btn-primary" style="background-color: var(--prim); border-color: var(--prim-dark);">
+              <i class="bi bi-currency-dollar me-1"></i> Ver valores
+            </a>
+            <a href="#contato" class="btn btn-outline-primary" style="border-color: var(--prim); color: var(--prim);">
+              <i class="bi bi-telephone me-1"></i> Fale conosco
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="hero-card ratio ratio-16x9">
+            <!-- Substitua o src pelo seu vídeo do YouTube ou arquivo mp4 hospedado -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Fk5kZsQIZcM?si=umybOba4lGhYEz33" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- VALORES / PREÇOS -->
+    <section id="valores" class="container py-5">
+      <div class="text-center mb-4">
+        <span class="pill"><i class="bi bi-currency-exchange"></i> Valores</span>
+        <h2 class="mt-2 section-title">Planos e pacotes</h2>
+        <p class="text-muted">Valores de referência — personalizamos conforme a necessidade do seu evento.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="price-card p-4 h-100">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h5 class="mb-0">Segunda, Terça, Quarta, Quinta + Decoração</h5>
+              <span class="badge text-bg-light"><i class="bi bi-clock"></i> 4h</span>
+            </div>
+            <h3 class="fw-bold">R$ 750,00</h3>
+            <ul class="list-unstyled small mt-3">
+              <li><i class="bi bi-check-circle me-1"></i> Espaço + limpeza</li>
+              <li><i class="bi bi-check-circle me-1"></i> Mesas e cadeiras</li>
+              <li><i class="bi bi-check-circle me-1"></i> Som ambiente</li>
+            </ul>
+            <button class="btn btn-outline-primary w-100" data-plan="Essencial"><i class="bi bi-chat-left-text me-1"></i> Solicitar orçamento</button>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="price-card p-4 h-100 border-2 position-relative">
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill text-bg-warning">
+              Mais pedido
+            </span>
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h5 class="mb-0">Sextas, Sabados, Domingos e Feriados + Decoração</h5>
+              <span class="badge text-bg-light"><i class="bi bi-clock"></i> 6h</span>
+            </div>
+            <h3 class="fw-bold">R$ 950,00</h3>
+            <ul class="list-unstyled small mt-3">
+              <li><i class="bi bi-check-circle me-1"></i> Tudo do Essencial</li>
+              <li><i class="bi bi-check-circle me-1"></i> Iluminação cênica</li>
+              <li><i class="bi bi-check-circle me-1"></i> Sala kids</li>
+            </ul>
+            <button class="btn btn-primary w-100" style="background-color: var(--prim); border-color: var(--prim-dark);" data-plan="Encantado"><i class="bi bi-stars me-1"></i> Reservar agora</button>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="price-card p-4 h-100">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h5 class="mb-0">Segunda, Terça, Quarta, Quinta </h5>
+              <span class="badge text-bg-light"><i class="bi bi-clock"></i> 8h</span>
+            </div>
+            <h3 class="fw-bold">R$ 600,00</h3>
+            <ul class="list-unstyled small mt-3">
+              <li><i class="bi bi-check-circle me-1"></i> Tudo do Encantado</li>
+              <li><i class="bi bi-check-circle me-1"></i> DJ + pista</li>
+              <li><i class="bi bi-check-circle me-1"></i> Suíte dos noivos</li>
+            </ul>
+            <button class="btn btn-outline-primary w-100" data-plan="Real"><i class="bi bi-gem me-1"></i> Falar com consultor</button>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="price-card p-4 h-100">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h5 class="mb-0">Sextas, Sabados, Domingos e Feriados</h5>
+              <span class="badge text-bg-light"><i class="bi bi-clock"></i> 8h</span>
+            </div>
+            <h3 class="fw-bold">R$ 850,00</h3>
+            <ul class="list-unstyled small mt-3">
+              <li><i class="bi bi-check-circle me-1"></i> Tudo do Encantado</li>
+              <li><i class="bi bi-check-circle me-1"></i> DJ + pista</li>
+              <li><i class="bi bi-check-circle me-1"></i> Suíte dos noivos</li>
+            </ul>
+            <button class="btn btn-outline-primary w-100" data-plan="Real"><i class="bi bi-gem me-1"></i> Falar com consultor</button>
+          </div>
+        </div>
+      </div>
+       
+      </div>
+      
+
+      <p class="small text-muted mt-3"><i class="bi bi-info-circle"></i> *Os preços são estimativas e podem variar por data, número de convidados e serviços adicionais.</p>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="container py-5">
+      <div class="text-center mb-4">
+        <span class="pill"><i class="bi bi-images"></i> Galeria</span>
+        <h2 class="mt-2 section-title">Imagens do salão</h2>
+        <p class="text-muted">Clique para ampliar. Substitua pelos seus arquivos quando desejar.</p>
+      </div>
+      <div class="row g-3 gallery">
+        <!-- Imagens de placeholder; troque os src pelos seus -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao1.jpg" class="img-fluid" alt="Foto 1" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa1/1200/800" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao2.jpg" class="img-fluid" alt="Foto 2" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa2/1200/800" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao3.jpg" class="img-fluid" alt="Foto 3" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa3/1200/800" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao4.jpg" class="img-fluid" alt="Foto 4" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa4/1200/800" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao5.jpg" class="img-fluid" alt="Foto 5" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa5/1200/800" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao6.jpg" class="img-fluid" alt="Foto 6" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa6/1200/800" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao7.jpg" class="img-fluid" alt="Foto 7" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa7/1200/800" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao8.jpg" class="img-fluid" alt="Foto 8" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa8/1200/800" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao9.jpg" class="img-fluid" alt="Foto 8" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa8/1200/800" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao10.jpg" class="img-fluid" alt="Foto 8" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa8/1200/800" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao11.jpg" class="img-fluid" alt="Foto 8" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa8/1200/800" />
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="./img/salao12.jpg" class="img-fluid" alt="Foto 8" data-bs-toggle="modal" data-bs-target="#imgModal" data-img="https://picsum.photos/seed/festa8/1200/800" />
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL DE IMAGEM -->
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img id="modalImg" src="" alt="Imagem ampliada" class="w-100" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENDEREÇO -->
+    <section id="endereco" class="container py-5">
+      <div class="text-center mb-4">
+        <span class="pill"><i class="bi bi-geo-alt"></i> Endereço</span>
+        <h2 class="mt-2 section-title">Como chegar</h2>
+        <p class="text-muted">Av. Dr. Hermínio Ometto, 477 — Bairro Alto Santa Rita — Leme/SP</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow-sm">
+            <!-- Substitua o src do mapa pela sua localização (Google Maps Embed) -->
+            <iframe src="https://www.google.com/maps?q=Av.+Dr.+Hermínio+Ometto,+477&output=embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="container py-5">
+      <div class="text-center mb-4">
+        <span class="pill"><i class="bi bi-envelope"></i> Contato</span>
+        <h2 class="mt-2 section-title">Peça um orçamento</h2>
+        <p class="text-muted">Conte pra gente a data, o tipo de evento e o número de convidados.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-7">
+          <form id="formContato" class="bg-white p-4 rounded-4 shadow-sm border">
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label class="form-label">Nome</label>
+                <input type="text" class="form-control" name="nome" required />
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label">Telefone/WhatsApp</label>
+                <input type="tel" class="form-control" name="telefone" required />
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label">E-mail</label>
+                <input type="email" class="form-control" name="email" required />
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label">Data do Evento</label>
+                <input type="date" class="form-control" name="data" required />
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label">Nº de Convidados</label>
+                <input type="number" class="form-control" name="convidados" min="10" max="500" />
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label">Pacote</label>
+                <select class="form-select" name="pacote">
+                  <option>Segunda, Terça, Quarta, Quinta</option>
+                  <option>Segunda, Terça, Quarta, Quinta + Decoração</option>
+                  <option>Sextas, Sabados, Domingos e Feriados </option>
+                  <option>Sextas, Sabados, Domingos e Feriados + Decoração</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Mensagem</label>
+                <textarea class="form-control" rows="4" name="mensagem" placeholder="Conte-nos detalhes do seu evento..."></textarea>
+              </div>
+              <div class="col-12 d-grid d-md-flex gap-2">
+                <button class="btn btn-primary" style="background-color: var(--prim); border-color: var(--prim-dark);" type="submit">
+                  <i class="bi bi-send me-1"></i> Enviar
+                </button>
+                <a id="btnWhats" target="_blank" class="btn btn-success"><i class="bi bi-whatsapp me-1"></i> WhatsApp</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="bg-white p-4 rounded-4 shadow-sm border h-100">
+            <h5 class="fw-bold mb-3"><i class="bi bi-clock-history"></i> Horários de funcionamento</h5>
+            <ul class="list-unstyled small">
+              <li>Seg a Sex: 09:00 – 18:00</li>
+              <li>Sábado: 09:00 – 14:00</li>
+              <li>Eventos: conforme agendamento</li>
+            </ul>
+            <hr>
+            <h5 class="fw-bold mb-3"><i class="bi bi-share"></i> Redes sociais</h5>
+            <div class="d-flex gap-2">
+              <a class="btn btn-outline-dark btn-sm" href="https://www.instagram.com/era_uma_vezeventos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram"></i></a>
+              <a class="btn btn-outline-dark btn-sm" href="#"><i class="bi bi-facebook"></i></a>
+              <a class="btn btn-outline-dark btn-sm" href="#"><i class="bi bi-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="pt-5 pb-4 mt-3">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-12 col-md">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-stars text-warning"></i>
+              <strong>Era Uma Vez</strong>
+            </div>
+            <small class="text-muted">CNPJ 00.000.000/0001-00</small>
+          </div>
+          <div class="col-12 col-md-auto">
+            <small class="text-muted">© <span id="ano"></span> Era Uma Vez — Todos os direitos reservados.</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+     
+
+
+    <script src="./js/inicio.js"></script>
+</body>
+</html>
